@@ -27,11 +27,7 @@ class Collection01CollectionViewController: UICollectionViewController {
         
         let bookData = bookInfo.book[indexPath.row]
         
-        cell.mainContentView.backgroundColor = .systemGray5
-        cell.bookTitle.text = bookData.title
-        cell.bookRate.text = "\(bookData.rate)"
-        cell.bookCover.backgroundColor = .systemGray6
-        cell.bookCover.kf.setImage(with: URL(string: bookData.url))
+        cell.configure(data: bookData)
         
         return cell
         
